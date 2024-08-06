@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -22,9 +23,52 @@ p {
     color: #666;
 }
 
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Form styles */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height based on header */
+    padding-top: 60px; /* Adjust padding based on header height */
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 form div {
@@ -56,22 +100,5 @@ button {
 
 button:hover {
     background-color: #4cae4c;
-}
-
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.navbar a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
 }
 
