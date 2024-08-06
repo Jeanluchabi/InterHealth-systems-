@@ -13,7 +13,7 @@ const RegisterPage = () => {
             await axios.post('http://localhost:5000/api/auth/register', { username, password });
             navigate('/login'); // Redirect to login page after successful registration
         } catch (error) {
-            console.error('Error registering:', error);
+            console.error('Error registering:', error.response ? error.response.data : error.message);
         }
     };
 

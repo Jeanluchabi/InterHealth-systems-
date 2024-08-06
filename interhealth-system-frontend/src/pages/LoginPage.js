@@ -12,9 +12,9 @@ const LoginPage = () => {
         try {
             const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
             localStorage.setItem('token', response.data.token);
-            navigate('/dashboard'); // Redirect to a protected route after login
+            navigate('/dashboard'); // Redirect to the dashboard after login
         } catch (error) {
-            console.error('Error logging in:', error);
+            console.error('Error logging in:', error.response ? error.response.data : error.message);
         }
     };
 
@@ -34,5 +34,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
 
